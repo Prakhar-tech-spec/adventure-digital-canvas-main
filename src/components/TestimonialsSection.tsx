@@ -72,25 +72,25 @@ const TestimonialsSection = () => {
       text: "Arpan and the AdVenture Marketing team scaled my Instagram from 2K to 40K in just 3 months! Their creativity and strategic mind is unmatched.",
       author: "Sudhir Kove",
       role: "E-commerce Founder",
-      image: "https://randomuser.me/api/portraits/men/65.jpg"
+      image: "/assets/Sudhir kove.jpeg"
     },
     {
       text: "We saw a 6x ROI on our paid ads within 2 weeks. Absolutely loved working with them!",
       author: "Aman Asati",
       role: "Tech Startup CEO",
-      image: "https://randomuser.me/api/portraits/men/43.jpg"
+      image: "/assets/Aman asati.jpeg"
     },
     {
       text: "The video content they created went viral and brought us 50K new followers. Game-changing results!",
       author: "Siddharth Chaudhary",
       role: "Influencer",
-      image: "https://randomuser.me/api/portraits/men/76.jpg"
+      image: "/assets/sidharth chaudhary.png"
     },
     {
       text: "Their AI automation setup saved us 20 hours per week. The efficiency gains are incredible.",
       author: "Subhrangshu Mahakud",
       role: "Marketing Director",
-      image: "https://randomuser.me/api/portraits/men/41.jpg"
+      image: "/assets/Subhrangshu Mahakud.jpeg"
     }
   ];
 

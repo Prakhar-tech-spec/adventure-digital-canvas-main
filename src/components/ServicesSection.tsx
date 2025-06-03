@@ -111,18 +111,18 @@ const ServicesSection = () => {
   }];
   const adsProjects = [{
     id: 1,
-    title: "E-commerce ROI",
-    image: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&h=400&fit=crop",
+    title: "ads-1",
+    image: "/assets/ads-1.jpg",
     type: "image"
   }, {
     id: 2,
-    title: "Lead Gen Campaign",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    title: "ads-2",
+    image: "/assets/ads-2.jpg",
     type: "image"
   }, {
     id: 3,
-    title: "Multi-Channel Strategy",
-    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&h=400&fit=crop",
+    title: "ads-3",
+    image: "/assets/ads-3.jpg",
     type: "image"
   }];
   const socialProjects = [{
