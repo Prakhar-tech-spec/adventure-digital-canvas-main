@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 10 10% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 10 10% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 171 100% 44%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 10 10% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 10 10% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 243 75% 59%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 10 10% 20%;
+    --input: 10 10% 20%;
+    --ring: 171 100% 44%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 10 10% 4%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 171 100% 44%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 10 10% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 10 10% 20%;
+    --sidebar-ring: 171 100% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-dark-bg text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera*/
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .magnetic-btn {
+    @apply relative overflow-hidden transition-all duration-300 hover:scale-105;
+  }
+
+  .magnetic-btn::before {
+    @apply absolute inset-0 bg-gradient-to-r from-electric-teal to-electric-purple opacity-0 transition-opacity duration-300;
+    content: '';
+  }
+
+  .magnetic-btn:hover::before {
+    @apply opacity-10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-electric-teal to-electric-purple bg-clip-text text-transparent;
+  }
+
+  .floating-particle {
+    @apply absolute rounded-full bg-electric-teal opacity-20 animate-float;
+  }
+
+  .service-card {
+    @apply relative overflow-hidden rounded-xl bg-dark-surface border border-dark-border transition-all duration-500 hover:border-[#5fecff] hover:shadow-lg hover:shadow-[#5fecff]/20 hover:-translate-y-2;
+  }
+
+  .service-card::before {
+    @apply absolute inset-0 bg-gradient-to-r from-[#5fecff]/10 to-[#4ac2d0]/10 opacity-0 transition-opacity duration-500;
+    content: '';
+  }
+
+  .service-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .double-border-button {
+    position: relative;
+    isolation: isolate;
+    /* Ensure content is above pseudo-element */
+  }
+
+  .double-border-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--dark-border); /* Adjust border color and width as needed */
+    border-radius: 9999px; /* Full rounded */
+    /* Use background color from parent if needed, or transparent */
+    z-index: -1;
+}
+
+  .double-border-button:hover {
+    box-shadow: 0 0 20px 5px rgba(95, 236, 255, 0.6);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+@keyframes blink-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-blink-subtle {
+  animation: blink-subtle 1.5s infinite ease-in-out;
+}
+
+.double-border-button.hover-glow-blue:hover {
+  box-shadow: 0 0 20px 5px rgba(95, 236, 255, 0.6);
+}
+
+@keyframes continuous-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px 2px rgba(95, 236, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(95, 236, 255, 0.8);
+  }
+}
+
+.animate-continuous-glow {
+  animation: continuous-glow 2s infinite ease-in-out;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera*/
+}
