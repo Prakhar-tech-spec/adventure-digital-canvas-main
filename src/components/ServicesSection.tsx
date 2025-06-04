@@ -694,11 +694,11 @@ const ProjectCard = ({ project }: { project: any }) => {
   return (
     <div className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1">
       {project.type === "image" && (project.title === "Youtube Result : 1" || project.title === "Youtube Result : 2") ? (
-        <div className="relative aspect-video overflow-hidden bg-black">
-          <img
+        <div className="relative aspect-video overflow-hidden bg-[#181A20]">
+          <BlurImage
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full"
           />
         </div>
       ) : project.type === "image" && [
@@ -708,15 +708,15 @@ const ProjectCard = ({ project }: { project: any }) => {
         "Instagram Result : 3",
         "Social Media Result : 1"
       ].includes(project.title) ? (
-        <div className="relative aspect-[9/16] overflow-hidden">
-          <img
+        <div className="relative aspect-[9/16] overflow-hidden bg-[#181A20]">
+          <BlurImage
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
+            className="w-full h-full"
           />
         </div>
       ) : (
-        <div className="relative aspect-video overflow-hidden">
+        <div className="relative aspect-video overflow-hidden bg-[#181A20]">
           {project.type === "video" && project.videoUrl ? (
             <VideoModal
               videoUrl={project.videoUrl}
@@ -724,10 +724,10 @@ const ProjectCard = ({ project }: { project: any }) => {
               thumbnail={project.image}
             />
           ) : (
-            <img
+            <BlurImage
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
+              className="w-full h-full"
             />
           )}
         </div>
@@ -735,6 +735,31 @@ const ProjectCard = ({ project }: { project: any }) => {
       <div className="p-4">
         <h4 className="font-medium text-foreground">{project.title}</h4>
       </div>
+    </div>
+  );
+};
+
+// Helper BlurImage component
+const BlurImage = ({ src, alt, className }: { src: string; alt: string; className?: string }) => {
+  const [loaded, setLoaded] = useState(false);
+  // Generate a low-res version by appending ?w=20&blur (if using an image CDN) or use a static tiny image if available
+  // For now, fallback to a blurred version of the same image (CSS blur)
+  return (
+    <div className={`relative w-full h-full ${className || ''}`} style={{ background: '#181A20' }}>
+      <img
+        src={src}
+        alt={alt}
+        className={`w-full h-full object-contain absolute inset-0 transition-opacity duration-500 ${loaded ? 'opacity-0' : 'opacity-100 blur-md scale-105'}`}
+        aria-hidden="true"
+        style={{ filter: 'blur(16px)', pointerEvents: 'none' }}
+      />
+      <img
+        src={src}
+        alt={alt}
+        className={`w-full h-full object-contain absolute inset-0 transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        onLoad={() => setLoaded(true)}
+        draggable={false}
+      />
     </div>
   );
 };
