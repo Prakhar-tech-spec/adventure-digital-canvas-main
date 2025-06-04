@@ -34,9 +34,10 @@ const HeroSection = () => {
             <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-r from-[#5fecff] to-[#4ac2d0] p-1">
               <div className="w-full h-full rounded-full bg-dark-surface flex items-center justify-center">
                 <img
-                  src="/assets/apran-image.jpeg"
+                  src="/assets/apran-image.webp"
                   alt="Arpan Dey"
                   className="w-44 h-44 rounded-full object-cover object-top"
+                  loading="lazy"
                 />
               </div>
             </div>

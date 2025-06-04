@@ -72,25 +72,25 @@ const TestimonialsSection = () => {
       text: "Arpan and the AdVenture Marketing team scaled my Instagram from 2K to 40K in just 3 months! Their creativity and strategic mind is unmatched.",
       author: "Sudhir Kove",
       role: "E-commerce Founder",
-      image: "/assets/Sudhir kove.jpeg"
+      image: "/assets/Sudhir kove.webp"
     },
     {
       text: "We saw a 6x ROI on our paid ads within 2 weeks. Absolutely loved working with them!",
       author: "Aman Asati",
       role: "Tech Startup CEO",
-      image: "/assets/Aman asati.jpeg"
+      image: "/assets/Aman asati.webp"
     },
     {
       text: "The video content they created went viral and brought us 50K new followers. Game-changing results!",
       author: "Siddharth Chaudhary",
       role: "Influencer",
-      image: "/assets/sidharth chaudhary.png"
+      image: "/assets/sidharth chaudhary.webp"
     },
     {
       text: "Their AI automation setup saved us 20 hours per week. The efficiency gains are incredible.",
       author: "Subhrangshu Mahakud",
       role: "Marketing Director",
-      image: "/assets/Subhrangshu Mahakud.jpeg"
+      image: "/assets/Subhrangshu Mahakud.webp"
     }
   ];
 
@@ -147,6 +147,7 @@ const TestimonialsSection = () => {
                       src={testimonial.image}
                       alt={testimonial.author}
                       className="w-12 h-12 rounded-full mr-4"
+                      loading="lazy"
                     />
                     <div>
                       <div className="font-semibold text-foreground">

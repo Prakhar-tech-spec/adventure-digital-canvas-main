@@ -55,117 +55,117 @@ const ServicesSection = () => {
   const designProjects = [{
     id: 1,
     title: "Thumbnail: 1",
-    image: "/assets/thumbnail-1.jpeg",
+    image: "/assets/thumbnail-1.webp",
     type: "image"
   }, {
     id: 2,
     title: "Thumbnail: 2",
-    image: "/assets/thumbnail-2.jpeg",
+    image: "/assets/thumbnail-2.webp",
     type: "image"
   }, {
     id: 3,
     title: "Thumbnail: 3",
-    image: "/assets/thumbnail-3.jpeg",
+    image: "/assets/thumbnail-3.webp",
     type: "image"
   }, {
     id: 4,
     title: "Graphic Design: 1",
-    image: "/assets/graphic-1.jpeg",
+    image: "/assets/graphic-1.webp",
     type: "image"
   }, {
     id: 5,
     title: "Graphic Design: 2",
-    image: "/assets/graphic-2.jpeg",
+    image: "/assets/graphic-2.webp",
     type: "image"
   }];
   const webProjects = [{
     id: 1,
     title: "Inventory Management Software",
-    image: "/assets/Inventory-management-software.png",
+    image: "/assets/Inventory-management-software.webp",
     type: "image"
   }, {
     id: 2,
     title: "EMI Management Software",
-    image: "/assets/EMI management software.png",
+    image: "/assets/EMI management software.webp",
     type: "image"
   }, {
     id: 3,
     title: "Software for Realtors",
-    image: "/assets/Software for realtors.png",
+    image: "/assets/Software for realtors.webp",
     type: "image"
   }, {
     id: 4,
     title: "Website - 1",
-    image: "/assets/website-1.jpg",
+    image: "/assets/website-1.webp",
     type: "image"
   }, {
     id: 5,
     title: "Website - 2",
-    image: "/assets/website-2.jpg",
+    image: "/assets/website-2.webp",
     type: "image"
   }, {
     id: 6,
     title: "Website - 3",
-    image: "/assets/website-3.jpg",
+    image: "/assets/website-3.webp",
     type: "image"
   }];
   const adsProjects = [{
     id: 1,
     title: "ads-1",
-    image: "/assets/ads-1.jpg",
+    image: "/assets/ads-1.webp",
     type: "image"
   }, {
     id: 2,
     title: "ads-2",
-    image: "/assets/ads-2.jpg",
+    image: "/assets/ads-2.webp",
     type: "image"
   }, {
     id: 3,
     title: "ads-3",
-    image: "/assets/ads-3.jpg",
+    image: "/assets/ads-3.webp",
     type: "image"
   }];
   const socialProjects = [{
     id: 7,
     title: "Social Media Result : 1",
-    image: "/assets/social-media-result1.jpeg",
+    image: "/assets/social-media-result1.webp",
     type: "image"
   }, {
     id: 2,
     title: "Instagram Result : 1",
-    image: "/assets/Instagram result 1.jpg",
+    image: "/assets/Instagram result 1.webp",
     type: "image"
   }, {
     id: 3,
     title: "Instagram Result : 2",
-    image: "/assets/Instagram result 2.jpg",
+    image: "/assets/Instagram result 2.webp",
     type: "image"
   }, {
     id: 4,
     title: "Instagram Result : 3",
-    image: "/assets/Instagram result 3.jpg",
+    image: "/assets/Instagram result 3.webp",
     type: "image"
   }, {
     id: 5,
     title: "Youtube Result : 1",
-    image: "/assets/Youtube result 1.png",
+    image: "/assets/Youtube result 1.webp",
     type: "image"
   }, {
     id: 6,
     title: "Youtube Result : 2",
-    image: "/assets/Youtube result 2.jpg",
+    image: "/assets/Youtube result 2.webp",
     type: "image"
   }, {
     id: 1,
     title: "Facebook Result",
-    image: "/assets/Facebook Result 1.jpg",
+    image: "/assets/Facebook Result 1.webp",
     type: "image"
   }
   ];
   const aiAgentProjects = [
-    { id: 1, title: "AI Agent : 1", image: "/assets/ai-calling-agent.png", type: "image" },
-    { id: 2, title: "AI Agent : 2", image: "/assets/ai-agent-2.jpeg", type: "image" },
-    { id: 3, title: "AI Agent : 3", image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&h=400&fit=crop", type: "image" },
+    { id: 1, title: "AI Agent : 1", image: "/assets/ai-calling-agent.webp", type: "image" },
+    { id: 2, title: "AI Agent : 2", image: "/assets/ai-agent-2.webp", type: "image" },
+    { id: 3, title: "AI Agent : 3", image: "/assets/ai-agent-3.webp", type: "image" },
   ];
   return (
     <section id="services" className="py-20 relative">
@@ -550,6 +550,7 @@ const ProjectCard = ({ project }: { project: any }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
+            loading="lazy"
           />
           <button
             onClick={handleAudioToggle}
@@ -606,9 +607,10 @@ const ProjectCard = ({ project }: { project: any }) => {
       <div className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1 relative">
         <div className="relative aspect-video overflow-hidden flex items-center justify-center">
           <img
-            src="/assets/ai-agent-2.jpeg"
+            src="/assets/ai-agent-2.webp"
             alt={project.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
+            loading="lazy"
           />
           <button
             onClick={handleAudioToggle}
@@ -665,9 +667,10 @@ const ProjectCard = ({ project }: { project: any }) => {
       <div className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1 relative">
         <div className="relative aspect-video overflow-hidden flex items-center justify-center">
           <img
-            src="/assets/ai-agent-3.jpeg"
+            src="/assets/ai-agent-3.webp"
             alt={project.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
+            loading="lazy"
           />
           <button
             onClick={handleAudioToggle}
@@ -699,6 +702,7 @@ const ProjectCard = ({ project }: { project: any }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
           />
         </div>
       ) : project.type === "image" && [
@@ -713,6 +717,7 @@ const ProjectCard = ({ project }: { project: any }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
+            loading="lazy"
           />
         </div>
       ) : (
@@ -728,6 +733,7 @@ const ProjectCard = ({ project }: { project: any }) => {
               src={project.image}
               alt={project.title}
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
+              loading="lazy"
             />
           )}
         </div>
