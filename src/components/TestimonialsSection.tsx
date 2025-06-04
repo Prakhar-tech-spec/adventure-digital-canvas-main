@@ -147,7 +147,6 @@ const TestimonialsSection = () => {
                       src={testimonial.image}
                       alt={testimonial.author}
                       className="w-12 h-12 rounded-full mr-4"
-                      loading="lazy"
                     />
                     <div>
                       <div className="font-semibold text-foreground">

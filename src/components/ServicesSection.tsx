@@ -549,8 +549,7 @@ const ProjectCard = ({ project }: { project: any }) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
-            loading="lazy"
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           />
           <button
             onClick={handleAudioToggle}
@@ -607,10 +606,9 @@ const ProjectCard = ({ project }: { project: any }) => {
       <div className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1 relative">
         <div className="relative aspect-video overflow-hidden flex items-center justify-center">
           <img
-            src="/assets/ai-agent-2.webp"
+            src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
-            loading="lazy"
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           />
           <button
             onClick={handleAudioToggle}
@@ -667,10 +665,9 @@ const ProjectCard = ({ project }: { project: any }) => {
       <div className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1 relative">
         <div className="relative aspect-video overflow-hidden flex items-center justify-center">
           <img
-            src="/assets/ai-agent-3.webp"
+            src={project.image}
             alt={project.title}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
-            loading="lazy"
+            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           />
           <button
             onClick={handleAudioToggle}
@@ -702,7 +699,6 @@ const ProjectCard = ({ project }: { project: any }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
           />
         </div>
       ) : project.type === "image" && [
@@ -717,7 +713,6 @@ const ProjectCard = ({ project }: { project: any }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
-            loading="lazy"
           />
         </div>
       ) : (
@@ -733,7 +728,6 @@ const ProjectCard = ({ project }: { project: any }) => {
               src={project.image}
               alt={project.title}
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 bg-black"
-              loading="lazy"
             />
           )}
         </div>

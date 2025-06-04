@@ -37,7 +37,6 @@ const HeroSection = () => {
                   src="/assets/apran-image.webp"
                   alt="Arpan Dey"
                   className="w-44 h-44 rounded-full object-cover object-top"
-                  loading="lazy"
                 />
               </div>
             </div>
