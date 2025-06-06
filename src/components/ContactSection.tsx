@@ -22,9 +22,14 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // Simulate sending delay
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://sheetdb.io/api/v1/hq9odfmwn90bz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: formData }),
+      });
       setSending(false);
+      if (response.ok) {
       setSent(true);
     setFormData({
       name: '',
@@ -38,7 +43,21 @@ const ContactSection = () => {
         description: "Thanks for reaching out! We'll get back to you within 24 hours.",
       });
       setTimeout(() => setSent(false), 1500);
-    }, 1200);
+      } else {
+        toast({
+          title: "Error",
+          description: "There was an error submitting the form. Please try again.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      setSending(false);
+      toast({
+        title: "Error",
+        description: "There was an error submitting the form. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleChange = (field: string, value: string) => {

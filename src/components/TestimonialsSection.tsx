@@ -69,28 +69,34 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      text: "Arpan and the AdVenture Marketing team scaled my Instagram from 2K to 40K in just 3 months! Their creativity and strategic mind is unmatched.",
+      text: "I have grown my followers from 30k-50k and with 24M+ views and 2000+ organic leads in just 3 months also I have tried their AI Agents who handles and set appointments with our closest very smoothly and saves our tons of time and Money!\nThe One Stop Solution For business Arpan (Adventure Marketing)",
       author: "Sudhir Kove",
-      role: "E-commerce Founder",
+      role: "Coach",
       image: "/assets/Sudhir kove.webp"
     },
     {
-      text: "We saw a 6x ROI on our paid ads within 2 weeks. Absolutely loved working with them!",
+      text: "The Ultimate Guy to handle my all needs for my business he is the man who takes care my whole marketing organic and inorganic very responsibly and his strategies are stunning and fully result oriented.",
       author: "Aman Asati",
-      role: "Tech Startup CEO",
+      role: "Agency Owner & Coach",
       image: "/assets/Aman asati.webp"
     },
     {
-      text: "The video content they created went viral and brought us 50K new followers. Game-changing results!",
+      text: "Arpan Generated 10M+ views and 30k+followers in 4months for my clients pages and have made absolutely smooth AI automations for my clients ( That generated my clients lakhs rs of business) .Also have given Stunning Results on our clients ads that was managed by Arpan",
       author: "Siddharth Chaudhary",
-      role: "Influencer",
+      role: "Agency Owner",
       image: "/assets/sidharth chaudhary.webp"
     },
     {
-      text: "Their AI automation setup saved us 20 hours per week. The efficiency gains are incredible.",
+      text: "Arpan has Build us a stunning Website for my business. \nAlso he have done SEO and GMB for us that is generating unlimited leads for my business.\n\nGood work and keep it up Team Adventure (Arpan)",
       author: "Subhrangshu Mahakud",
-      role: "Marketing Director",
+      role: "Agency Owner CEO AdHok",
       image: "/assets/Subhrangshu Mahakud.webp"
+    },
+    {
+      text: "Arpan is the guy who worked for our content edits and UGC videos, also paid campaigns. We have generated thousands of leads. The Perfect Result Oriented Guy who generated us an unbelievable result in just 4 months.",
+      author: "Prathyusha",
+      role: "Influencer & UGC Head",
+      image: "/assets/Prathysha.webp"
     }
   ];
 
@@ -143,11 +149,14 @@ const TestimonialsSection = () => {
                     </p>
                   </div>
                   <div className="flex items-center">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.author}
-                      className="w-12 h-12 rounded-full mr-4"
-                    />
+                    <div className="relative mr-4">
+                      <span className="absolute inset-0 rounded-full p-0.5 bg-gradient-to-r from-[#5fecff] to-[#4ac2d0]" style={{ zIndex: 0 }}></span>
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="w-12 h-12 rounded-full object-cover relative z-10 border-2 border-dark-bg"
+                      />
+                    </div>
                     <div>
                       <div className="font-semibold text-foreground">
                         {testimonial.author}

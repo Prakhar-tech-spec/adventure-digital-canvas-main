@@ -24,10 +24,16 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="mb-4 inline-flex items-center px-4 py-2 bg-dark-surface border border-dark-border rounded-full">
             <span className="w-2 h-2 mr-2 rounded-full animate-blink-subtle" style={{ backgroundColor: '#5fecff', boxShadow: '0 0 8px 4px rgba(95, 236, 255, 0.6)' }}></span>
-            <span className="text-sm text-muted-foreground">3 spots left</span>
+            <span className="text-sm text-muted-foreground">Almost full</span>
           </div>
           <h1 className="text-4xl md:text-7xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-white to-gray-700 bg-clip-text text-transparent">
-            High-Performance Content, Ads &<br />Automation—Done for You.
+            An automation to business transformation<br />
+            <br />
+            <span
+              className="inline-block text-transparent bg-gradient-to-r from-[#5fecff] to-[#4ac2d0] bg-clip-text"
+            >
+              Execute Growth & Automate
+            </span>
           </h1>
           
           <div className="mb-8 animate-fade-in" style={{animationDelay: '0.3s'}}>
