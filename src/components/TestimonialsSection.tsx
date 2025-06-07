@@ -151,11 +151,11 @@ const TestimonialsSection = () => {
                   <div className="flex items-center">
                     <div className="relative mr-4">
                       <span className="absolute inset-0 rounded-full p-0.5 bg-gradient-to-r from-[#5fecff] to-[#4ac2d0]" style={{ zIndex: 0 }}></span>
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.author}
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.author}
                         className="w-12 h-12 rounded-full object-cover relative z-10 border-2 border-dark-bg"
-                      />
+                    />
                     </div>
                     <div>
                       <div className="font-semibold text-foreground">

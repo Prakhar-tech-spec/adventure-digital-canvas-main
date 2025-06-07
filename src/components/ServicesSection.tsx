@@ -356,57 +356,57 @@ const ProjectCard = ({ project }: { project: any }) => {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <div 
-            ref={containerRef1}
-            className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1"
-            onMouseEnter={() => handleMouseEnter(videoRef1)}
-            onMouseLeave={() => handleMouseLeave(videoRef1)}
+      <div 
+        ref={containerRef1}
+        className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1"
+        onMouseEnter={() => handleMouseEnter(videoRef1)}
+        onMouseLeave={() => handleMouseLeave(videoRef1)}
             onClick={() => setOpen(true)}
-          >
-            <div className="relative aspect-[9/16] overflow-hidden">
-              <video 
-                ref={videoRef1}
-                src="/videos/$5 VS $110 Edit.mp4"
-                className="w-full h-full object-cover cursor-pointer"
-                muted={isMuted1}
-                playsInline
-                loop
-                preload="metadata"
-                onClick={(e) => {
-                  const video = e.currentTarget;
-                  if (video.paused) {
-                    video.play();
-                  } else {
-                    video.pause();
-                  }
-                }}
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="w-12 h-12 rounded-full bg-[#5fecff] flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-              
-              {/* Sound toggle button */}
-              <button 
-                className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70 z-10"
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent video play/pause
-                  setIsMuted1(!isMuted1);
-                }}
-              >
-                {isMuted1 ? 
-                  <VolumeX className="h-4 w-4 text-white" /> : 
-                  <Volume2 className="h-4 w-4 text-[#5fecff]" />
-                }
-              </button>
-            </div>
-            <div className="p-4">
-              <h4 className="font-medium text-foreground">{project.title}</h4>
+      >
+        <div className="relative aspect-[9/16] overflow-hidden">
+          <video 
+            ref={videoRef1}
+            src="/videos/$5 VS $110 Edit.mp4"
+            className="w-full h-full object-cover cursor-pointer"
+            muted={isMuted1}
+            playsInline
+            loop
+            preload="metadata"
+            onClick={(e) => {
+              const video = e.currentTarget;
+              if (video.paused) {
+                video.play();
+              } else {
+                video.pause();
+              }
+            }}
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="w-12 h-12 rounded-full bg-[#5fecff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
           </div>
+          
+          {/* Sound toggle button */}
+          <button 
+            className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70 z-10"
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent video play/pause
+              setIsMuted1(!isMuted1);
+            }}
+          >
+            {isMuted1 ? 
+              <VolumeX className="h-4 w-4 text-white" /> : 
+              <Volume2 className="h-4 w-4 text-[#5fecff]" />
+            }
+          </button>
+        </div>
+        <div className="p-4">
+          <h4 className="font-medium text-foreground">{project.title}</h4>
+        </div>
+      </div>
         </DialogTrigger>
         <DialogContent className="max-w-3xl w-full p-4 sm:p-8 bg-dark-surface rounded-lg flex flex-col items-center justify-center">
           <div className="w-full flex flex-col items-center">
@@ -422,57 +422,57 @@ const ProjectCard = ({ project }: { project: any }) => {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <div 
-            ref={containerRef2}
-            className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1"
-            onMouseEnter={() => handleMouseEnter(videoRef2)}
-            onMouseLeave={() => handleMouseLeave(videoRef2)}
+      <div 
+        ref={containerRef2}
+        className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1"
+        onMouseEnter={() => handleMouseEnter(videoRef2)}
+        onMouseLeave={() => handleMouseLeave(videoRef2)}
             onClick={() => setOpen(true)}
-          >
-            <div className="relative aspect-[9/16] overflow-hidden">
-              <video 
-                ref={videoRef2}
-                src="/videos/Before VS After.mp4"
-                className="w-full h-full object-cover cursor-pointer"
-                muted={isMuted2}
-                playsInline
-                loop
-                preload="metadata"
-                onClick={(e) => {
-                  const video = e.currentTarget;
-                  if (video.paused) {
-                    video.play();
-                  } else {
-                    video.pause();
-                  }
-                }}
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="w-12 h-12 rounded-full bg-[#5fecff] flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-              
-              {/* Sound toggle button */}
-              <button 
-                className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70 z-10"
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent video play/pause
-                  setIsMuted2(!isMuted2);
-                }}
-              >
-                {isMuted2 ? 
-                  <VolumeX className="h-4 w-4 text-white" /> : 
-                  <Volume2 className="h-4 w-4 text-[#5fecff]" />
-                }
-              </button>
-            </div>
-            <div className="p-4">
-              <h4 className="font-medium text-foreground">{project.title}</h4>
+      >
+        <div className="relative aspect-[9/16] overflow-hidden">
+          <video 
+            ref={videoRef2}
+            src="/videos/Before VS After.mp4"
+            className="w-full h-full object-cover cursor-pointer"
+            muted={isMuted2}
+            playsInline
+            loop
+            preload="metadata"
+            onClick={(e) => {
+              const video = e.currentTarget;
+              if (video.paused) {
+                video.play();
+              } else {
+                video.pause();
+              }
+            }}
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="w-12 h-12 rounded-full bg-[#5fecff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
           </div>
+          
+          {/* Sound toggle button */}
+          <button 
+            className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70 z-10"
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent video play/pause
+              setIsMuted2(!isMuted2);
+            }}
+          >
+            {isMuted2 ? 
+              <VolumeX className="h-4 w-4 text-white" /> : 
+              <Volume2 className="h-4 w-4 text-[#5fecff]" />
+            }
+          </button>
+        </div>
+        <div className="p-4">
+          <h4 className="font-medium text-foreground">{project.title}</h4>
+        </div>
+      </div>
         </DialogTrigger>
         <DialogContent className="max-w-3xl w-full p-4 sm:p-8 bg-dark-surface rounded-lg flex flex-col items-center justify-center">
           <div className="w-full flex flex-col items-center">
@@ -488,52 +488,52 @@ const ProjectCard = ({ project }: { project: any }) => {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <div 
-            ref={containerRef3}
-            className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1"
-            onMouseEnter={() => handleMouseEnter(videoRef3)}
-            onMouseLeave={() => handleMouseLeave(videoRef3)}
+      <div 
+        ref={containerRef3}
+        className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1"
+        onMouseEnter={() => handleMouseEnter(videoRef3)}
+        onMouseLeave={() => handleMouseLeave(videoRef3)}
             onClick={() => setOpen(true)}
+      >
+        <div className="relative aspect-[9/16] overflow-hidden">
+          <video 
+            ref={videoRef3}
+            src="/videos/Faceless Edit.mp4"
+            className="w-full h-full object-cover cursor-pointer"
+            muted={isMuted3}
+            playsInline
+            loop
+            preload="metadata"
+            onClick={(e) => {
+              const video = e.currentTarget;
+              if (video.paused) {
+                video.play();
+              } else {
+                video.pause();
+              }
+            }}
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="w-12 h-12 rounded-full bg-[#5fecff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Sound toggle button */}
+          <button 
+            className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70 z-10"
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent video play/pause
+              setIsMuted3(!isMuted3);
+            }}
           >
-            <div className="relative aspect-[9/16] overflow-hidden">
-              <video 
-                ref={videoRef3}
-                src="/videos/Faceless Edit.mp4"
-                className="w-full h-full object-cover cursor-pointer"
-                muted={isMuted3}
-                playsInline
-                loop
-                preload="metadata"
-                onClick={(e) => {
-                  const video = e.currentTarget;
-                  if (video.paused) {
-                    video.play();
-                  } else {
-                    video.pause();
-                  }
-                }}
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                <div className="w-12 h-12 rounded-full bg-[#5fecff] flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black ml-1" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-              
-              {/* Sound toggle button */}
-              <button 
-                className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-opacity-70 z-10"
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent video play/pause
-                  setIsMuted3(!isMuted3);
-                }}
-              >
-                {isMuted3 ? 
-                  <VolumeX className="h-4 w-4 text-white" /> : 
-                  <Volume2 className="h-4 w-4 text-[#5fecff]" />
-                }
-              </button>
+            {isMuted3 ? 
+              <VolumeX className="h-4 w-4 text-white" /> : 
+              <Volume2 className="h-4 w-4 text-[#5fecff]" />
+            }
+          </button>
             </div>
             <div className="p-4">
               <h4 className="font-medium text-foreground">{project.title}</h4>
@@ -697,7 +697,7 @@ const ProjectCard = ({ project }: { project: any }) => {
       };
     }, []);
   
-    return (
+  return (
       <div className="overflow-hidden rounded-lg bg-dark-surface border border-dark-border group hover:border-[#5fecff] transition-all duration-300 hover:-translate-y-1 relative">
         <div className="relative aspect-video overflow-hidden flex items-center justify-center">
           <img
@@ -737,42 +737,42 @@ const ProjectCard = ({ project }: { project: any }) => {
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full"
-              />
-            </div>
-          ) : project.type === "image" && [
-            "Facebook Result",
-            "Instagram Result : 1",
-            "Instagram Result : 2",
-            "Instagram Result : 3",
-            "Social Media Result : 1"
-          ].includes(project.title) ? (
+          />
+        </div>
+      ) : project.type === "image" && [
+        "Facebook Result",
+        "Instagram Result : 1",
+        "Instagram Result : 2",
+        "Instagram Result : 3",
+        "Social Media Result : 1"
+      ].includes(project.title) ? (
             <div className="relative aspect-[9/16] overflow-hidden bg-[#181A20]">
               <BlurImage
-                src={project.image}
-                alt={project.title}
+            src={project.image}
+            alt={project.title}
                 className="w-full h-full"
-              />
-            </div>
-          ) : (
+          />
+        </div>
+      ) : (
             <div className="relative aspect-video overflow-hidden bg-[#181A20]">
-              {project.type === "video" && project.videoUrl ? (
-                <VideoModal
-                  videoUrl={project.videoUrl}
-                  title={project.title}
-                  thumbnail={project.image}
-                />
-              ) : (
+          {project.type === "video" && project.videoUrl ? (
+            <VideoModal
+              videoUrl={project.videoUrl}
+              title={project.title}
+              thumbnail={project.image}
+            />
+          ) : (
                 <BlurImage
-                  src={project.image}
-                  alt={project.title}
+              src={project.image}
+              alt={project.title}
                   className="w-full h-full"
-                />
-              )}
-            </div>
+            />
           )}
-          <div className="p-4">
-            <h4 className="font-medium text-foreground">{project.title}</h4>
-          </div>
+        </div>
+      )}
+      <div className="p-4">
+        <h4 className="font-medium text-foreground">{project.title}</h4>
+      </div>
         </div>
       </DialogTrigger>
       <DialogContent className="max-w-3xl w-full p-4 sm:p-8 bg-dark-surface rounded-lg flex flex-col items-center justify-center">

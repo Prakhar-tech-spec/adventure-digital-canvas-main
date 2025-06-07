@@ -23,7 +23,7 @@ const ContactSection = () => {
     e.preventDefault();
     setSending(true);
     try {
-      const response = await fetch('https://sheetdb.io/api/v1/hq9odfmwn90bz', {
+      const response = await fetch('https://sheetdb.io/api/v1/936g4wkzyhrbi', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: formData }),
